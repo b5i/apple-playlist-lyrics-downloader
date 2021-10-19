@@ -5,7 +5,9 @@ How to use :
 
 ```
 npm install
-If you have problems with security type npm audit fix --force
+```
+If you have problems with security type ```npm audit fix --force```
+```
 pip3 install -r requirements.txt
 ```
 Set the playlist link at the 'url' variable in the file 'apple_playlist.js'
@@ -34,3 +36,4 @@ Or a message like 'No lyrics found'
 
 
 Code uses https://gist.github.com/greenstick/b23e475d2bfdc3a82e34eaa1f6781ee4 for the progress bar and a modified version of https://github.com/Shubhamrawat5/apple-playlist-downloader/blob/master/apple_playlist.js to fetch the tracks.
+I use my other repository : https://github.com/antoinebollengier/lyrics_finder for the core of the project (using https://github.com/SimonIT/spotifylyrics)
