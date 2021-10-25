@@ -1,4 +1,6 @@
+#Script by @antoinebollengier
 import os
+import platform
 import re
 from urllib import request, parse
 import sys
@@ -86,9 +88,23 @@ def megalobiz(artist, songname, original_singer, total, number):
             state = '(Found)'
             printProgressBar(int(number), int(total), shell_output,  prefix = 'Progress:', length = 50)
             #print('\r('+number + '/' + total + ', '+percentage+'%) LYRICS FOUNDS FOR : ' + songname + ' by ' + artist)
-            time.sleep(0.5)
-            os.system('mkdir -p lyrics')
-            os.system("mv '" + filename_lrc + "' 'lyrics/" + original_singer + ' - ' + songname + '.lrc'+"'")
+            os_platform = platform.system()
+            if os_platform == 'Linux':
+                os_final = 'Linux'
+                os.system('mkdir -p lyrics')
+                os.system("mv '" + filename_lrc + "' 'lyrics/" + b_artist + ' - ' + b_title + '.lrc'+"'")
+            elif os_platform == 'Windows':
+                os_final = 'Windows'
+                os.system('mkdir -p lyrics')
+                os.system("move '" + filename_lrc + "' 'lyrics/" + b_artist + ' - ' + b_title + '.lrc'+"'")
+            elif os_platform == 'Darwin':
+                os_final = 'MacOS'
+                os.system('mkdir -p lyrics')
+                os.system("mv '" + filename_lrc + "' 'lyrics/" + b_artist + ' - ' + b_title + '.lrc'+"'")
+            else:
+                os_final = 'Dunno'
+                os.system('mkdir -p lyrics')
+                os.system("mv '" + filename_lrc + "' 'lyrics/" + b_artist + ' - ' + b_title + '.lrc'+"'")     
             lrc = ''
             possible_text = ''
             result_links = ''
