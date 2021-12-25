@@ -92,19 +92,19 @@ def megalobiz(artist, songname, original_singer, total, number):
             if os_platform == 'Linux':
                 os_final = 'Linux'
                 os.system('mkdir -p lyrics')
-                os.system("mv '" + filename_lrc + "' 'lyrics/" + b_artist + ' - ' + b_title + '.lrc'+"'")
+                os.system("mv '" + filename_lrc + "' 'lyrics/" + original_singer + ' - ' + songname + '.lrc'+"'")
             elif os_platform == 'Windows':
                 os_final = 'Windows'
                 os.system('mkdir -p lyrics')
-                os.system("move '" + filename_lrc + "' 'lyrics/" + b_artist + ' - ' + b_title + '.lrc'+"'")
+                os.system("move '" + filename_lrc + "' 'lyrics/" + original_singer + ' - ' + songname + '.lrc'+"'")
             elif os_platform == 'Darwin':
                 os_final = 'MacOS'
                 os.system('mkdir -p lyrics')
-                os.system("mv '" + filename_lrc + "' 'lyrics/" + b_artist + ' - ' + b_title + '.lrc'+"'")
+                os.system("mv '" + filename_lrc + "' 'lyrics/" + original_singer + ' - ' + songname + '.lrc'+"'")
             else:
                 os_final = 'Dunno'
                 os.system('mkdir -p lyrics')
-                os.system("mv '" + filename_lrc + "' 'lyrics/" + b_artist + ' - ' + b_title + '.lrc'+"'")     
+                os.system("mv '" + filename_lrc + "' 'lyrics/" + original_singer + ' - ' + songname + '.lrc'+"'")     
             lrc = ''
             possible_text = ''
             result_links = ''
@@ -125,7 +125,7 @@ import json
 def main():
 
     # create a simple JSON array
-    jsonString = '''[{"name":"happier","singer":"Olivia Rodrigo","original_singer":"Olivia Rodrigo"}]'''
+    jsonString = ''''''
     # change the JSON string into a JSON object
     jsonObject = json.loads(jsonString)
 
