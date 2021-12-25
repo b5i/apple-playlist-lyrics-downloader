@@ -5,7 +5,7 @@ module.exports.getPlaylist = async () => {
   try {
     let playlistObj = {};
     let url =
-      "https://music.apple.com/ch/playlist/djo1/pl.u-06oxDlbCYm6L8mE?l=frr"; //put your playlist url
+      ""; //put your playlist url
     const response = await axios.get(url);
     let htmlContent = response.data;
     let soup = new JSSoup(htmlContent);
